@@ -10,6 +10,7 @@ nextCells = []
 for x in range(WIDTH):
     column = []  # create a new column.
     for y in range(HEIGHT):
+        # if (x, y) in ((1, 0), (2, 1), (0, 2), (1, 2), (2, 2)):
         if random.randint(0, 1) == 0:
             column.append('#')  # Add a living cell.
         else:
