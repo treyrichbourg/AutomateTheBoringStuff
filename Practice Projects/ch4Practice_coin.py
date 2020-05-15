@@ -3,13 +3,6 @@ import random
 number_of_streaks = 0
 flips = 100
 
-for experiment_Number in range(10000):
-    coin_flips = []
-    for i in range(flips):
-        if random.randint(0, 1) == 0:
-            coin_flips.append(0)
-        else:
-            coin_flips.append(1)
 
 
 In [81]: for experiment_Number in range(10000): 
@@ -32,3 +25,20 @@ In [81]: for experiment_Number in range(10000):
 In [82]:                                                                                      
 
 In [82]:    
+
+
+num_streaks = 0
+def flip():
+    return random.randint(0, 1)
+
+def list_of_flips(num):
+    return[flip() for n in range(num)]
+
+def flips_str(num):
+    return "".join([str(flip()) for n in range(num)])
+
+for trial_number in range(20):
+    if streak_in_flips(6, 100):
+        print("Streak of 6 heads or tails present")
+    else:
+        print("Streak not found")
