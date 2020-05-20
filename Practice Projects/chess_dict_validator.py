@@ -30,19 +30,35 @@ def count_pieces(chess_dict):
             count.setdefault(count_new, 0)
             count[count_new] += 1
 #Create a function to ensure the pieces counted are within the valid range
-def trial(dict1, dict2):
-    for keys in dict2:
-        if dict1[keys] >= dict2[keys]:
-            return True
+def test(count, piece_set):
+    for k in count:
+        if piece_set[k] < count[k]:
+            return False
+#Main Validator function
+def is_valid_chess_board(chess_dict, dict2):
+    if king_check(chess_dict) and valid_space(chess_dict):
+        count_pieces(chess_dict)
+    if test(chess_dict, dict2):
+        print('The board is valid')
+    else:
+        print('Invalid Board')
 
-def is_valid_chess_board(chess_dict):
-    return king_check(chess_dict)
+count = {}
+#count all pieces in the dictionary and put in dict with all pieces available
+def count_pieces(chess_dict):
+    pieces_available = ['bking', 'wking', 'bqueen', 'wqueen', 'bpawn', 'wpawn', 'bknight', 'wknight', 'bbishop', 'wbishop', 'brook', 'wrook'] 
+    for pieces in pieces_available:
+        count.setdefault(pieces, 0)
+    for p in chess_dict.values():
+        count[p] += 1
+
   
 trial = {'h1': 'bking', 'c6': 'wqueen', 'g2': 'bbishop', 'h5': 'bqueen', 'e3': 'wking'}
 trial2 = {'h1': 'bking', 'c6': 'wqueen', 'g2': 'bbishop', 'h5': 'bqueen'}
-
-print(is_valid_chess_board(trial))
-print(is_valid_chess_board(trial2))
+trial3 = {'g2': 'bking', 'c6': 'wqueen', 'g2': 'bbishop', 'h5': 'bqueen', 'e3': 'wking'}
+trial4 = {'h1': 'bking', 'c6': 'wqueen', 'g2': 'bbishop', 'h5': 'bqueen', 'e3': 'wking', 'c7':'bbishop'}
+print(is_valid_chess_board(trial, count))
+print(is_valid_chess_board(trial2, count))
 
 
 
