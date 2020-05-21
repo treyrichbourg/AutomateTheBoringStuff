@@ -5,14 +5,22 @@
 #1 queen/king CHECK
 #each side must have 1 king or game is over CHECK
 #all pieces must be within 1a-8h CHECK
-board_keys = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8',
-              'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8',
-              'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8',
-              'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8',
-              'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8',
-              'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8',
-              'g1', 'g2', 'g3', 'g4', 'g5', 'g6', 'g7', 'g8',
-              'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8']
+
+#board keys hardcoded
+# board_keys = ['a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8',
+#               'b1', 'b2', 'b3', 'b4', 'b5', 'b6', 'b7', 'b8',
+#               'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8',
+#               'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8',
+#               'e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8',
+#               'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8',
+#               'g1', 'g2', 'g3', 'g4', 'g5', 'g6', 'g7', 'g8',
+#               'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8']
+
+#board_keys with list comp
+# board_keys = [x + str(y) for x in 'abcdefgh' for y in range(1,9)]
+
+#board_keys list comp fstr
+board_keys = [f"{ch}{i}" for ch in 'abcdefgh' for i in range(1, 9)]
 
 piece_set = {'bpawn': 8, 'bknight': 2, 'bbishop': 2, 'brook': 2, 'bqueen': 1, 'bking': 1,
              'wpawn': 8, 'wknight': 2, 'wbishop': 2, 'wrook': 2, 'wqueen': 1, 'wking': 1}
