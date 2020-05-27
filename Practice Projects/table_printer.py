@@ -14,15 +14,19 @@ def print_table(data):
         for string in range(len(data[value_set])):
             if len(data[value_set][string]) > column_widths[value_set]:
                 column_widths[value_set] = len(data[value_set][string])
-    print(column_widths)
-    #return each list inside the data in a 'table' using .rjust(column_width) for each appropriate iteration
-    #make a variable to store the index of each list inside the data
-    data_index = [i for i in range(len(table_data))]
+    #print(column_widths)
+    #return each list inside the data in a table using .rjust(column_width) for each appropriate iteration
+    #make a variable to tell the loop when to line break
+    number_of_columns = len(data) - 1
+    #loop through the length of the first index in data
+    for word in range(len(data[0])):    
+        for column in range(len(data)):
+            if column < number_of_columns:
+                print(data[column][word].rjust(column_widths[column]), end = ' ')
+            else:
+                print(data[column][word].rjust(column_widths[column]))
 
-
-
-
-print(print_table(table_data))
+print_table(table_data)
 
 
 
