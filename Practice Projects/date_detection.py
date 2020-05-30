@@ -40,7 +40,10 @@ def date_validator(text):
         return 'This date is not valid!'
     
     else:
+        utcd, utcm, utcy = (date.group(2)), (date.group(4)), (date.group(6))  
         print(date_regex.search(text).group())
+        print(f'UTC {utcy}-{utcm}-{utcd}')
+
         return 'This is a valid date!'
 
 
