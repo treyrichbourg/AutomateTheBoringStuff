@@ -1,57 +1,30 @@
-import random
-import sys
-print('ROCK, PAPER, SCISSORS')
+#!/usr/bin/env python3
+# regex_search.py opens all .txt files in a folder and searches for any line that matches a user-supplied regular expression
+# The results are printed to the screen
 
-wins = 0
-losses = 0
-ties = 0
+from pathlib import Path
+import re, os
+import pyinputplus as pyip
+#Prompt user to input a path to be searched
+file_path = input("Please enter a path to the folder you want to search:\n")
+file_path_obj = Path(file_path) #Now we have the file path as a string and Path object
 
-while True:
-    print('%s Wins, %s Losses, %s Ties' % (wins, losses, ties))
-    while True:
-        print('Enter your move: (r)ock, (p)aper, (s)cissors or (q)uit')
-        player_move = input()
-        if player_move == 'q':
-            sys.exit()
-        if player_move == 'r' or player_move == 'p' or player_move == 's':
-            break
-        print('Type one of r, p, s, or q.')
-    if player_move == 'r':
-        print('ROCK Versus...')
-    elif player_move == 'p':
-        print('PAPER Versus...')
-    elif player_move == 's':
-        print('SCISSORS Versus...')
-
-    ran = random.randint(1, 3)
-    if ran == 1:
-        comp_move = 'r'
-        print('ROCK')
-    elif ran == 2:
-        comp_move = 'p'
-        print('PAPER')
-    elif ran == 3:
-        comp_move = 's'
-        print('SCISSORS')
-
-    if player_move == comp_move:
-        print("IT'S A TIE!")
-        ties += 1
-    elif player_move == 'r' and comp_move == 's':
-        print('You win!')
-        wins += 1
-    elif player_move == 'p' and comp_move == 'r':
-        print('You win!')
-        wins += 1
-    elif player_move == 's' and comp_move == 'p':
-        print('You win!')
-        wins += 1
-    elif player_move == 'r' and comp_move == 'p':
-        print('You lose!')
-        losses += 1
-    elif player_move == 'p' and comp_move == 's':
-        print('You lose!')
-        losses += 1
-    elif player_move == 's' and comp_move == 'r':
-        print('You lose!')
-        losses += 1
+if Path.is_dir(file_path_obj) == True: #Check for valid directory
+    #Prompt user to input a regular expression 
+    search_criteria = pyip.inputRegexStr(prompt = "Enter a regular expression to search for:\n")
+    text_files = os.listdir(file_path_obj) #List all files in dir
+    for text_file in text_files: #Loop through all files
+        
+        if text_file.endswith('.txt'): #Find the text files
+            try:
+                contents = open(file_path_obj / text_file) #Open the file
+                list_of_lines = contents.readlines() #Make a list of all the lines
+            
+                contents.close() #Close the text file
+                for line in list_of_lines: #Loop through every item in the list of lines
+                    if search_criteria.search(line) != None: #If the regex str finds a match
+                        print(f"This line in {text_file} matched your regular expression search:\n{line}")
+            except:
+                print(f"The program was unable to open {contents}")
+else:
+    print('Please enter a valid file path.')
