@@ -1,13 +1,16 @@
-all_spaces = [f"{ch}{i}" for ch in 'abcdefgh' for i in range(1,9)]
+all_spaces = [f"{ch}{i}" for ch in "abcdefgh" for i in range(1, 9)]
 pieces_on_board = []
+
 
 def king_check(chess_dict):
     pieces_on_board = []
     for space in all_spaces:
         if chess_dict.get(space):
             pieces_on_board.append(chess_dict.get(space))
-    #print(pieces_on_board)
-    return ('bking' in pieces_on_board) and ('wking' in pieces_on_board)
+    # print(pieces_on_board)
+    return ("bking" in pieces_on_board) and ("wking" in pieces_on_board)
+
+
 def main(chess_dict):
     while True:
         king_check(chess_dict)
@@ -15,23 +18,13 @@ def main(chess_dict):
     else:
         return False
 
-trial = {'h1': 'bking', 'c6': 'wqueen', 'g2': 'bbishop', 'h5': 'bqueen', 'e3': 'wking'}
-trial2 = {'h1': 'bking', 'c6': 'wqueen', 'g2': 'bbishop', 'h5': 'bqueen'}
+
+trial = {"h1": "bking", "c6": "wqueen", "g2": "bbishop", "h5": "bqueen", "e3": "wking"}
+trial2 = {"h1": "bking", "c6": "wqueen", "g2": "bbishop", "h5": "bqueen"}
 
 print(main(trial))
 print(main(trial2))
-#print(is_chess_board_valid(trial2))
-
-
-
-
-
-
-
-
-
-
-
+# print(is_chess_board_valid(trial2))
 
 
 
@@ -48,4 +41,4 @@ print(main(trial2))
 #     king_checker_results = king_checker(chess_dict)
 #     #print(king_checker_results)
 # def king_checker(chess_dict):
-    
+

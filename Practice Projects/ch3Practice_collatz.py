@@ -12,7 +12,7 @@ def collatz(number):  # does the math for Collatz Sequence
 
 
 try:
-    print('Enter number:')
+    print("Enter number:")
     number = int(input())
 
     while number != 1:
@@ -21,4 +21,4 @@ try:
         number = collatz(number)
 
 except:
-    print('Please enter an integer')
+    print("Please enter an integer")
