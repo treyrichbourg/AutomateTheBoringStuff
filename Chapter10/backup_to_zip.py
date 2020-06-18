@@ -8,12 +8,14 @@ def backup_to_zip(folder):
     #Back up the entire contents of "folder" into a ZIP file.
 
     folder = os.path.abspath(folder)   #make sure folder is absolute
+    print(folder)
 
     #Figure out the filename this code should use based on
     #what files already exist.
     number = 1
     while True:
         zip_filename = os.path.basename(folder) + '_' + str(number) + '.zip'
+        #zip_filename = f"{os.path.basename(folder)}_{number}.zip"
         if not os.path.exists(zip_filename):
             break
         number += 1
@@ -22,8 +24,22 @@ def backup_to_zip(folder):
     print(f'Creating {zip_filename}...')
     backup_zip = zipfile.ZipFile(zip_filename, 'w')
 
-    #TODO: Walk the entire folder tree and compress the files in each folder.
-    print('Done.')
+    #Walk the entire folder tree and compress the files in each folder.
+    for foldername, subfolders, filenames in os.walk(folder):
+        print(f'Adding files in {foldername}...')
+        #Add the current folder to the ZIP file.
+        backup_zip.write(foldername)
 
-backup_to_zip()
+        #Add all the files in this folder to the ZIP file.
+        for filename in filenames:
+            new_base = os.path.basename(folder) + '_'
+            if filename.startswith(new_base) and filename.endswith('.zip'):
+                continue    #don't back up the backup ZIP files
+            backup_zip.write(os.path.join(foldername, filename))
+    backup_zip.close()
+
+
+    print('Done.')
+    
+backup_to_zip('/mnt/c/Users/trey/Documents/delicious')
 
