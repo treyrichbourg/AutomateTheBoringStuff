@@ -179,3 +179,14 @@ JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: 
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
 JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
 1593842272514	Marionette	INFO	Stopped listening on port 46145
+1593894170901	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4b4SqY"
+Gtk-Message: 15:22:50.914: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 15:22:52.105: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 15:22:52.213: Failed to load module "appmenu-gtk-module"
+1593894172898	Marionette	INFO	Listening on port 43359
+1593894172909	Marionette	WARN	TLS certificate errors will be ignored for this session
+Gtk-Message: 15:22:53.072: Failed to load module "appmenu-gtk-module"
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+1593894201215	Marionette	INFO	Stopped listening on port 43359
