@@ -190,3 +190,105 @@ JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: 
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
 JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 174: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 208}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
 1593894201215	Marionette	INFO	Stopped listening on port 43359
+1594141419529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\trey\\AppData\\Local\\Temp\\rust_mozprofileg9KORQ"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594141421576	Marionette	INFO	Listening on port 54954
+1594141421631	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594141426560	Marionette	INFO	Stopped listening on port 54954
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1594141552252	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\trey\\AppData\\Local\\Temp\\rust_mozprofileMuPxNF"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594141554557	Marionette	INFO	Listening on port 55051
+1594141554934	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594141563856	Marionette	INFO	Stopped listening on port 55051
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1594141748975	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\trey\\AppData\\Local\\Temp\\rust_mozprofilebHK8Dr"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594141751131	Marionette	INFO	Listening on port 55164
+1594141751176	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594141764016	Marionette	INFO	Stopped listening on port 55164
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1594141812039	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\trey\\AppData\\Local\\Temp\\rust_mozprofileg5BBk2"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594141814090	Marionette	INFO	Listening on port 55259
+1594141814126	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594141821399	Marionette	INFO	Stopped listening on port 55259
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1594144462763	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\trey\\AppData\\Local\\Temp\\rust_mozprofile4xuJ2m"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594144464986	Marionette	INFO	Listening on port 55929
+1594144465482	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+console.error: "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers."
+JavaScript error: resource:///modules/UrlbarInput.jsm, line 2140: TypeError: event.target.closest is not a function
+console.error: "Panel inspector:" (new TypeError("event is undefined", "resource://devtools/client/shared/telemetry.js", 697))
+1594145572336	Marionette	INFO	Stopped listening on port 55929
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+66: Error: Can't find profile directory.
+1594144822432	Marionette	INFO	Listening on port 56047
+1594144822448	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594145575436	Marionette	INFO	Stopped listening on port 56047
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594144851216	Marionette	INFO	Listening on port 56122
+1594144851704	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594145574813	Marionette	INFO	Stopped listening on port 56122
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594144894809	Marionette	INFO	Listening on port 56203
+1594144894840	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594145081506	Marionette	INFO	Stopped listening on port 56203
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1594145086970	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\trey\\AppData\\Local\\Temp\\rust_mozprofilegrkGvc"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594145089194	Marionette	INFO	Listening on port 56302
+1594145089664	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594145573546	Marionette	INFO	Stopped listening on port 56302
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
