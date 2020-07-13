@@ -292,3 +292,15 @@ JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
 
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1594317991257	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\trey\\AppData\\Local\\Temp\\rust_mozprofileZpmzlG"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1594317993567	Marionette	INFO	Listening on port 65532
+1594317993634	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 55: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1594318044334	Marionette	INFO	Stopped listening on port 65532
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
