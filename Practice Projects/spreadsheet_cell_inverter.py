@@ -12,6 +12,7 @@ def get_filename():
         filename = Path(filename).absolute()
         return filename
 
+
 # Invert Cells
 def cell_inverter(filename):
     # Get workbook/sheet
@@ -23,17 +24,19 @@ def cell_inverter(filename):
     # Make new sheet
     invert_sheet = wb.create_sheet("Inverted")
     # Loop through cells in active sheet and update new sheet
-    for row in range(1, max_rows+1):
-        for col in range(1, max_cols+1):
-            invert_sheet.cell(row=col, column=row).value = active_sheet.cell(row=row, column=col).value
+    for row in range(1, max_rows + 1):
+        for col in range(1, max_cols + 1):
+            invert_sheet.cell(row=col, column=row).value = active_sheet.cell(
+                row=row, column=col
+            ).value
     wb.save(filename)
+
 
 def main():
     filename = get_filename()
     cell_inverter(filename)
-   
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
-
 
