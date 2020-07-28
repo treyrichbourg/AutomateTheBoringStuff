@@ -12,6 +12,9 @@ from pathlib import Path
 
 
 def argument_parser():
+    # One positional argument for the name of the spreadsheet to be manipulated
+    # Rest of the arguments are optional 
+    # If no arguments are given the spreadsheet is simply uploaded to Google Drive
     parser = argparse.ArgumentParser(
         prog="Spreadsheet Converter",
         usage="%(prog)s [spreadsheet] [options]",
@@ -54,27 +57,45 @@ def argument_parser():
     args = parser.parse_args()
     return args
 
+def get_spreadsheet(ss_name):
+    sheet_list = ezsheets.listSpreadsheets()
+    if ss_name not in sheet_list.values():
+        ss=ezsheets.upload(f"{ss_name}")
+        return ss
+    else:
+        for key, value in sheet_list.items():
+            if ss_name == value:
+                ss = ezsheets.Spreadsheet(key)
+                return ss
+            else:
+                raise Exception('The given spreadsheet name could not be uploaded and was not found in Google Drive.')
+    
 
 def main():
     args = argument_parser()
-    print(args)
-    ss_name = args.spreadsheet
-    print(ss_name)
-    print(args.csv)
-    ss = ezsheets.upload(f"{ss_name}")
-    if args.csv:
-        ss.downloadAsCSV(ss_name)
+    # ss_name = args.spreadsheet
+    # ss = get_spreadsheet(ss_name) 
+    # print(f'Converting {ss_name}...')
+    optional_args = []
+    arg_dict = vars(args)
+    for key in arg_dict.keys():
+        if key != 'spreadsheet':
+            optional_args.append(key)
+    print(optional_args)
+    #print(vars(args))
+    # if args.csv:
+    #     ss.downloadAsCSV() 
     # if args.excel:
-    #     ss.downloadAsExcel(ss_name)
+    #     ss.downloadAsExcel()
     # if args.zip:
-    #     ss.downloadAsHTML(ss_name)
+    #     ss.downloadAsHTML()
     # if args.pdf:
-    #     ss.downloadAsPDF(ss_name)
+    #     ss.downloadAsPDF()
     # if args.ods:
-    #     ss.downloadAsODS(ss_name)
+    #     ss.downloadAsODS()
     # if args.tsv:
-    #     ss.downloadAsTSV(ss_name)
-
-
+    #     ss.downloadAsTSV()
+    # print(f"Finished converting {ss_name}")
+    #print(args)
 if __name__ == "__main__":
     main()
