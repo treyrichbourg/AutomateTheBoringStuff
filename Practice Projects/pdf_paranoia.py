@@ -10,7 +10,7 @@ from pathlib import Path
 ## Prompt user for encryption password
 ##  Use os.walk() and grab all PDF files ## Using pathlib.Path.rglob() seemed more efficient
 ## Encrypt the PDFs and rename them with {name}_encrypted.pdf
-# Prompt user if they want to delete the original files and execute selection action
+## Prompt user if they want to delete the original files and execute selection action
 
 
 def prompt_file_path():
@@ -68,6 +68,8 @@ def delete_originals(pdf_files):
 
 
 def main():
+    print("pdf_paranoia_0.0.1")
+    print("pdf_paranoia will encrypt your PDF files.")
     file_path = prompt_file_path()
     password = prompt_encryption_key()
     pdf_files = grab_pdfs(file_path)
@@ -79,6 +81,7 @@ def main():
         print(f"All PDF files in {file_path} were properly encrypted.")
     else:
         print(f"PDF files in {file_path} were not properly encrypted.")
+        return None
     response = pyinputplus.inputYesNo(
         prompt="Would you like to delete the original, unecrypted files?\n",
         yesVal="yes",
