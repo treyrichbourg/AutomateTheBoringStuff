@@ -1,3 +1,4 @@
-spam,eggs,bacon,ham
-"Hello, world!",eggs,bacon,ham
-1,2,3,141592,4
+Name,Pet,Phone
+Alice,cat,555-1234
+Bob,,555-9999
+Carol,dog,555-5555
