@@ -3,6 +3,7 @@
 
 from pathlib import Path
 from PIL import Image
+from PIL import ExifTags
 import re
 import shutil
 import argparse
@@ -23,22 +24,28 @@ def get_exif(filename):
         image.verify()
     except:
         return
-    if image._getexif() == None:
+    if image.getexif() == {}:
         print(f"{image.filename} has no exif data.")
         return  
-    return image._getexif()
+    return image.getexif()
 
 def sort_jpgs(path):
-    for file in path.rglob('*.jpg'):
+    for file in path.rglob('*.jpg' or '*.jpeg' or '*.JPG'):
         exif = get_exif(file)
         if exif == None: continue 
-        photo_date = re.match(r"20\d\d", exif[36867]).group()
-        Path(path/photo_date).mkdir(exist_ok=True)
-        source = str(Path(file))
-        dest = str(Path(path/photo_date))
-        if Path(dest/file).exists() == True: pass
+        exiftag = {ExifTags.TAGS[k]: v for k, v in exif.items() if k in ExifTags.TAGS and type(v) is not bytes}
+        date_time_og = exiftag.get('DateTimeOriginal')
+        if date_time_og != None:
+            photo_date = re.match(r"20\d\d", exiftag['DateTimeOriginal']).group()
         else:
-            shutil.move(source, dest)    
+            photo_date = re.match(r"20\d\d", exiftag['DateTime']).group()
+        Path(path/photo_date).mkdir(exist_ok=True)
+        file_name = file.name
+        source = Path(file)
+        dest = Path(path/photo_date)
+        if Path(dest/file_name).exists() == True: pass
+        else:
+            shutil.move(str(source), str(dest))    
 
 def main():
     args = argument_parser()
