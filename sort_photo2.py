@@ -22,7 +22,8 @@ def get_exif(filename):
     try:
         image = Image.open(filename)
         image.verify()
-    except:
+    except Exception as e:
+        print(e)
         return
     if image.getexif() == {}:
         print(f"{image.filename} has no exif data.")
@@ -32,17 +33,23 @@ def get_exif(filename):
 def sort_jpgs(path):
     for file in path.rglob('*.jpg' or '*.jpeg' or '*.JPG'):
         exif = get_exif(file)
-        if exif == None: continue 
+        if exif == None: 
+            continue 
         exiftag = {ExifTags.TAGS[k]: v for k, v in exif.items() if k in ExifTags.TAGS and type(v) is not bytes}
         date_time_og = exiftag.get('DateTimeOriginal')
+        date_time = exiftag.get('DateTime')
         if date_time_og != None:
             photo_date = re.match(r"20\d\d", exiftag['DateTimeOriginal']).group()
-        else:
+        elif date_time != None:
             photo_date = re.match(r"20\d\d", exiftag['DateTime']).group()
+        else:
+            print(f"'DateTimeOriginal' or 'DateTime' are not valid exif keys in:\n{file}")
         Path(path/photo_date).mkdir(exist_ok=True)
         file_name = file.name
         source = Path(file)
         dest = Path(path/photo_date)
+        print(f"source = {source}")
+        print(f"destination = {dest/file_name}")
         if Path(dest/file_name).exists() == True: pass
         else:
             shutil.move(str(source), str(dest))    
