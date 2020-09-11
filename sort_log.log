@@ -1,0 +1,11 @@
+WARNING:root:/mnt/c/Users/trey/Documents/Bin/test/testdir1/8Ek0h0q.jpg has no exif data.
+INFO:root:source = /mnt/c/Users/trey/Documents/Bin/test/testdir1/fda.jpg
+INFO:root:destination = /mnt/c/Users/trey/Documents/Bin/test/2020/fda.jpg
+INFO:root:source = /mnt/c/Users/trey/Documents/Bin/test/testdir1/testdir1/dgdsag.jpg
+INFO:root:destination = /mnt/c/Users/trey/Documents/Bin/test/2020/dgdsag.jpg
+INFO:root:source = /mnt/c/Users/trey/Documents/Bin/test/testdir2/gdasgd.jpg
+INFO:root:destination = /mnt/c/Users/trey/Documents/Bin/test/2020/gdasgd.jpg
+WARNING:root:Error: cannot identify image file '/mnt/c/Users/trey/Documents/Bin/test/testdir3/fake_image.jpg'
+Filename: /mnt/c/Users/trey/Documents/Bin/test/testdir3/fake_image.jpg
+INFO:root:source = /mnt/c/Users/trey/Documents/Bin/test/testdir3/gkla.jpg
+INFO:root:destination = /mnt/c/Users/trey/Documents/Bin/test/2020/gkla.jpg
