@@ -15,9 +15,12 @@ logo_width, logo_height = logo_im.size
 
 os.makedirs('with_logo', exist_ok=True)
 # Loop over all files in the working directory.
+
 for filename in os.listdir('.'):
-    if not (filename.endswith('.png') or filename.endswith('.jpg')) \
-            or filename == LOGO_FILENAME:
+    if not (filename.lower().endswith(('.png', '.jpg', '.gif', '.bmp'))) \
+        or filename == LOGO_FILENAME:
+    #if not (filename.endswith('.png') or filename.endswith('.jpg') or filename.endswith('.gif') or filename.endswith('.bmp')) \
+    #       or filename == LOGO_FILENAME:
         continue  # skip non-image files and the logo file itself
 
     im = Image.open(filename)
