@@ -49,7 +49,7 @@ httplib2==0.18.1
 idna==2.9
 IMAPClient==2.1.0
 jdcal==1.4.1
-lxml==4.5.1
+lxml==4.6.2
 netmiko==3.2.0
 oauthlib==3.1.0
 openpyxl==2.6.2
