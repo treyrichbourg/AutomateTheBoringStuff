@@ -54,7 +54,7 @@ netmiko==3.2.0
 oauthlib==3.1.0
 openpyxl==2.6.2
 paramiko==2.7.1
-Pillow==7.2.0
+Pillow==8.1.1
 pkg-resources==0.0.0
 praw==7.1.0
 prawcore==1.4.0
