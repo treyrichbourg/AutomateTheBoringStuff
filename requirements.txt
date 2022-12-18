@@ -42,7 +42,7 @@ PyAutoGUI==0.9.50
 pycparser==2.20
 PyGetWindow==0.0.9
 PyInputPlus==0.2.9
-PyJWT==1.7.1
+PyJWT==2.4.0
 pylint==2.4.4
 PyMsgBox==1.0.8
 pyparsing==2.4.7
