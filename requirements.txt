@@ -35,7 +35,7 @@ pathspec==0.8.0
 Pillow==10.3.0
 praw==7.1.0
 prawcore==1.4.0
-protobuf==3.18.3
+protobuf==7.34.0rc1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 PyAutoGUI==0.9.50
