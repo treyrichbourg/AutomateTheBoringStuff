@@ -72,6 +72,6 @@ twilio==6.45.2
 typed-ast==1.4.1
 update-checker==0.17
 uritemplate==3.0.1
-urllib3==1.26.19
+urllib3==2.6.3
 websocket-client==0.57.0
 wrapt==1.11.2
