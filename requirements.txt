@@ -36,7 +36,7 @@ Pillow==12.1.1
 praw==7.1.0
 prawcore==1.4.0
 protobuf==5.29.6
-pyasn1==0.4.8
+pyasn1==0.6.3
 pyasn1-modules==0.2.8
 PyAutoGUI==0.9.50
 pycparser==2.20
